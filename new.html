@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<header>
+    <h5><a href="home.html">🚪</a></h5>
+</header>
+<style>
+    h5{
+        font-size: 100px;
+    }
+    h5 a{
+        text-decoration: none;
+    }
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #240202, #660000);
+}
+
+.container {
+    text-align: center;
+    background: rgb(77, 1, 1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgb(116, 5, 5);
+    width: 1000px;
+    color: aliceblue;
+}
+
+.player {
+    margin: 20px;
+}
+
+.choices button {
+    margin: 5px;
+    padding: 10px 60px;
+    font-size: 50px;
+    background-color: rgba(107, 62, 42, 0.466);
+    transition: background-color 0.3s, transform 0.2s;
+}
+button:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* More opaque on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+        <div class="player">
+            <h2>Player 1</h2>
+            <div class="choices">
+                <button onclick="makeChoice('rock', 1)"><img src="Screenshot 2024-09-25 222321_prev_ui.png" alt="" style="width: 50px; height: 40px;"></button>
+                <button onclick="makeChoice('paper', 1)"><img src="Screenshot 2024-09-25 223340_prev_ui.png" alt="" style="width: 50px;"></button>
+                <button onclick="makeChoice('scissors', 1)"><img src="Screenshot 2024-09-25 223819_prev_ui.png" alt="" style="width: 50px; height: 40px;" ></button>
+            </div>
+            <p id="player1-choice" style="display: none;"></p>
+        </div>
+        <div class="player">
+            <h2>Player 2</h2>
+            <div class="choices">
+                <button onclick="makeChoice('rock', 2)" class="rock2"><img src="Screenshot 2024-09-25 222321_prev_ui.png" alt="" style="width: 50px; height: 40px;"></button>
+                <button onclick="makeChoice('paper', 2)" class="paper2"><img src="Screenshot 2024-09-25 223340_prev_ui.png" alt="" style="width: 50px;"></button>
+                <button onclick="makeChoice('scissors', 2)" class="scissors"><img src="Screenshot 2024-09-25 223819_prev_ui.png" alt="" style="width: 50px; height: 40px;"></button>
+            </div>
+            <p id="player2-choice" style="display: none;"></p>
+        </div>
+        <button id="result-button" onclick="determineWinner()" disabled>the big reveal 🫠</button>
+        <p id="result"></p>
+    </div>
+    <script src="new.js"></script>
+</body>
+</html>
